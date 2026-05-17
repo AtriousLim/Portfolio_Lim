@@ -3,9 +3,7 @@
 // =========================
 
 
-// =========================
-// NAVBAR SCROLL
-// =========================
+// Navbar
 const navbar =
 document.getElementById("navbar");
 
@@ -26,9 +24,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-// =========================
-// DARK MODE
-// =========================
+// Dark Mode
 const themeToggle =
 document.getElementById("themeToggle");
 
@@ -39,9 +35,7 @@ themeToggle.addEventListener("click", () => {
 });
 
 
-// =========================
-// VISITOR COUNTER
-// =========================
+// Visitor Counter
 let visits =
 localStorage.getItem("portfolioVisits");
 
@@ -61,9 +55,7 @@ document.getElementById(
 ).textContent = visits;
 
 
-// =========================
-// REVEAL ANIMATION
-// =========================
+// Reveal Animation
 const reveals =
 document.querySelectorAll(".reveal");
 
@@ -93,9 +85,7 @@ function revealSections(){
 }
 
 
-// =========================
-// GREETING ANIMATION
-// =========================
+// Greetings
 const greetings = [
 
   "Hello",
@@ -110,7 +100,6 @@ const greetings = [
   "Привет",
   "مرحبا",
   "नमस्ते",
-  "Selamat Datang",
   "Xin Chào",
   "Olá"
 
@@ -182,9 +171,7 @@ function animateGreeting(){
 animateGreeting();
 
 
-// =========================
-// TYPING EFFECT
-// =========================
+// Typing
 const typingText =
 document.getElementById("typingText");
 
@@ -214,145 +201,101 @@ function typeEffect(){
 typeEffect();
 
 
-const skills = {
+// Skills
+const skills = [
 
-  python: {
-
-    name: "Python",
-    icon: "fa-brands fa-python",
+  {
+    name:"Python",
+    icon:"fa-brands fa-python",
 
     description:
-    "Python helped me improve my logical thinking, backend development skills, automation knowledge, and problem-solving abilities.",
+    "Python introduced me to programming logic, automation, backend development, and problem-solving concepts.",
 
-    hours: "300+",
-    level: "Intermediate"
-
+    hours:"50+",
+    level:"Beginner"
   },
 
-  html: {
-
-    name: "HTML",
-    icon: "fa-brands fa-html5",
+  {
+    name:"HTML",
+    icon:"fa-brands fa-html5",
 
     description:
-    "HTML taught me how to properly structure websites using semantic elements and responsive layouts.",
+    "HTML taught me how to structure responsive and modern websites properly.",
 
-    hours: "220+",
-    level: "Intermediate"
-
+    hours:"45+",
+    level:"Beginner"
   },
 
-  css: {
-
-    name: "CSS",
-    icon: "fa-brands fa-css3-alt",
+  {
+    name:"CSS",
+    icon:"fa-brands fa-css3-alt",
 
     description:
-    "CSS improved my understanding of layouts, animations, responsiveness, glassmorphism, and modern UI design.",
+    "CSS helped me understand layouts, animations, responsiveness, and modern UI design.",
 
-    hours: "250+",
-    level: "Intermediate"
-
+    hours:"55+",
+    level:"Beginner"
   },
 
-  javascript: {
-
-    name: "JavaScript",
-    icon: "fa-brands fa-js",
+  {
+    name:"JavaScript",
+    icon:"fa-brands fa-js",
 
     description:
-    "JavaScript introduced me to interactivity, DOM manipulation, animations, and dynamic website functionality.",
+    "JavaScript introduced me to website interactivity and DOM manipulation.",
 
-    hours: "180+",
-    level: "Beginner"
-
+    hours:"40+",
+    level:"Beginner"
   },
 
-  github: {
-
-    name: "GitHub",
-    icon: "fa-brands fa-github",
+  {
+    name:"GitHub",
+    icon:"fa-brands fa-github",
 
     description:
-    "GitHub helped me understand version control, repositories, collaboration workflows, and deployment practices.",
+    "GitHub helped me understand repositories, version control, and collaboration.",
 
-    hours: "120+",
-    level: "Beginner"
-
+    hours:"45+",
+    level:"Beginner"
   },
 
-  sql: {
-
-    name: "SQL",
-    icon: "fa-solid fa-database",
+  {
+    name:"SQL",
+    icon:"fa-solid fa-database",
 
     description:
-    "SQL introduced me to databases, transactions, queries, and data management concepts.",
+    "SQL introduced me to databases, queries, and data management concepts.",
 
-    hours: "140+",
-    level: "Beginner"
-
+    hours:"50+",
+    level:"Beginner"
   },
 
-  react: {
-
-    name: "React",
-    icon: "fa-brands fa-react",
+  {
+    name:"NetBeans",
+    icon:"fa-solid fa-code-branch",
 
     description:
-    "React helped me understand reusable components, dynamic interfaces, state management, and modern frontend development.",
+    "NetBeans helped me understand Java development and project management.",
 
-    hours: "90+",
-    level: "Beginner"
-
+    hours:"45+",
+    level:"Beginner"
   },
 
-  xampp: {
-
-    name: "XAMPP",
-    icon: "fa-solid fa-server",
-
-    description:
-    "XAMPP introduced me to local web hosting, Apache configuration, PHP environments, and MySQL database management.",
-
-    hours: "80+",
-    level: "Beginner"
-
-  },
-
-  figma: {
-
-    name: "Figma",
-    icon: "fa-brands fa-figma",
+  {
+    name:"Eclipse",
+    icon:"fa-solid fa-laptop",
 
     description:
-    "Figma improved my UI/UX design workflow, wireframing, layout planning, and interface prototyping skills.",
+    "Eclipse improved my understanding of Java programming workflows.",
 
-    hours: "70+",
-    level: "Beginner"
-
-  },
-
-  linux: {
-
-    name: "Linux",
-    icon: "fa-brands fa-linux",
-
-    description:
-    "Linux helped me understand terminal commands, shell scripting, server environments, and system navigation.",
-
-    hours: "110+",
-    level: "Beginner"
-
+    hours:"40+",
+    level:"Beginner"
   }
 
-};
+];
 
 
-
-// =========================
-// SKILL ROTATION
-// =========================
+// Skill Rotation
 let currentSkill = 0;
 
 function updateSkill(){
