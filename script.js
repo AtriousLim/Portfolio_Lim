@@ -24,17 +24,6 @@ window.addEventListener("scroll", () => {
 });
 
 
-// Dark Mode
-const themeToggle =
-document.getElementById("themeToggle");
-
-themeToggle.addEventListener("click", () => {
-
-  document.body.classList.toggle("light-mode");
-
-});
-
-
 // Visitor Counter
 let visits =
 localStorage.getItem("portfolioVisits");
@@ -171,7 +160,7 @@ function animateGreeting(){
 animateGreeting();
 
 
-// Typing
+// Typing Effect
 const typingText =
 document.getElementById("typingText");
 
